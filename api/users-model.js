@@ -20,7 +20,7 @@ function findBy(filter) {
             .where(filter);
 }
 
-functin findById(Id) {
+function findById(id) {
     return db('users')
             .select ('id', 'username')
             .where({ id })
