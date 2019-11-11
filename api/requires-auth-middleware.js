@@ -12,7 +12,7 @@ module.exports = (req, res, next) => {
            .then(user => {
                user && bcrypt.compareSync(password, user.password)
                 ? next()
-                : res.status(401).json({ message: 'Invalid Credentials' })
+                : res.status(401).json({ message: 'Invalid Credentials. You shall not pass!' })
            })
             .catch(err => {
                 res.status(500).json({ message: 'database error, please try again later' })
