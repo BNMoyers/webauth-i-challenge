@@ -1,4 +1,5 @@
 //imports and dependencies
+require('dotenv').config();
 const server = require('./api/server');
 
 //server & port
